@@ -17,7 +17,6 @@ public class MenuWorldController : MonoBehaviour
 
     void SpawnGhost()
     {
-        Debug.Log("Test");
         if(Random.Range(0, 100) <= spawnChance)
         {
             int spawnSelect = Random.Range(0, spawns.Length);
