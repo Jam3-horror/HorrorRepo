@@ -15,16 +15,16 @@ MonoBehaviour:
   prefabs:
   - gameObject: {fileID: 919132149155446097, guid: e34696f88b2466949946b405d75fe317, type: 3}
     settings:
-      m_Strength: 37.85401
+      m_Strength: 20
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
-      m_RotationRangeMax: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 43.404255, y: 114.893616, z: 158.29787}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
       m_ScaleRangeMax: {x: 1, y: 1, z: 1}
       m_UniformScale: {x: 1, y: 3.3529413}
       m_UniformBool: 1
-      m_XRotationBool: 0
+      m_XRotationBool: 1
       m_YRotationBool: 0
-      m_ZRotationBool: 0
+      m_ZRotationBool: 1
       m_XScaleBool: 0
       m_YScaleBool: 0
       m_ZScaleBool: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
     name: Tree2
   - gameObject: {fileID: 919132149155446097, guid: 3a4c49f103b95e149a53421ae191a17c, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 78.73194
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -63,7 +63,7 @@ MonoBehaviour:
     name: Tree3
   - gameObject: {fileID: 919132149155446097, guid: 6712447c85a0c1145bc6b37dec6a24d6, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 44.319527
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -77,3 +77,19 @@ MonoBehaviour:
       m_YScaleBool: 0
       m_ZScaleBool: 0
     name: Tree4
+  - gameObject: {fileID: 7985313045557704395, guid: c19160b967827b5458208ace51bba1b2, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 0, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 0
+      m_YRotationBool: 0
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 0
+    name: Tree3
