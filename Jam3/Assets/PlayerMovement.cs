@@ -38,10 +38,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+
     private void FixedUpdate()
     {
         PlayerMove();
     }
+
     void PlayerMove()
     {
         float LookDir = (Input.GetAxis("Mouse X"));
