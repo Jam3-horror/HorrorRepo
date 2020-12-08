@@ -23,7 +23,11 @@ public class Interactable : MonoBehaviour
     {
         Debug.Log("This should be overwritten");
     }
-
+    public void StopInteraction()
+    {
+        interacted = false;
+    }
+        
     // Update is called once per frame
     void Update()
     {
@@ -34,11 +38,15 @@ public class Interactable : MonoBehaviour
             {
                 if(Input.GetKeyDown(KeyCode.E))
                 {
-                    Interact();
+                    
                     interacted = true;
                 }
                 
             }
+        }
+        if(interacted)
+        {
+            Interact();
         }
     }
 

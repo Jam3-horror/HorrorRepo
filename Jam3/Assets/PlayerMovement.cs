@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+
         Camtransform = Camera.main.transform;
         rB = GetComponent<Rigidbody>();
         Cursor.visible = false;
@@ -40,7 +41,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        PlayerMove();
+   
+       
+            PlayerMove();
+      
     }
     void PlayerMove()
     {
