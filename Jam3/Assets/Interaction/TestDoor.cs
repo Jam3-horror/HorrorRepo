@@ -8,26 +8,15 @@ public class TestDoor : MonoBehaviour
 
     bool opened = false;
 
-    Transform target;
+    public Transform target;
+    public Transform door;
     public float speed = 1;
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        /*if (other.transform.name == "player")
-        {
-            Debug.Log("player here");
-            
-        }*/
         if (Inventory.instance.items.Contains(requiredItem))
         {
-            Debug.Log("you have key");
             opened = true;
         }
-        Debug.Log("entered trigger");
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        target = transform.GetChild(0);
     }
 
     // Update is called once per frame
@@ -35,10 +24,8 @@ public class TestDoor : MonoBehaviour
     {
         if(opened)
         {
-            // Move our position a step closer to the target.
-            float step = speed * Time.deltaTime; // calculate distance to move
-            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-            Debug.Log("door moving");
+            float step = speed * Time.deltaTime;
+            door.position = Vector3.MoveTowards(door.position, target.position, step);
         }
     }
 }
