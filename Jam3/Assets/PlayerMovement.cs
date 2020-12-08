@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         if (rotationY != 0 || rotationX != 0)
         {
             
-            cam.transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0); // rotating the camera on the y
+            cam.transform.localEulerAngles = new Vector3(-rotationY, 0, 0); // rotating the camera on the y
             this.transform.eulerAngles = new Vector3(0.0f, rotationX, 0.0f);
         }
 
@@ -52,12 +52,12 @@ public class PlayerMovement : MonoBehaviour
         Vector3 forward = transform.forward; //transform.forward;
         Vector3 right = transform.right; //transform.right;
 
-        right.y = 0;
+        //right.y = 0;
 
-        forward.Normalize();
-        right.Normalize();
+        //forward.Normalize();
+        //right.Normalize();
 
-        Vector3 DesMoveDir = (forward * input.z + right * input.x).normalized; // creating a vector that takes the input directions and multiplies them with the forward and side of camera so the player moves where it is looking 
+        Vector3 DesMoveDir = ((forward * input.z) + (right * input.x));//.normalized; // creating a vector that takes the input directions and multiplies them with the forward and side of camera so the player moves where it is looking 
 
         Vector3 DesLookDir = (right * LookDir).normalized; // normalising the look directon
 
