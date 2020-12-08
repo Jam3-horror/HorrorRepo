@@ -17,7 +17,9 @@ public class PlayerMovement : MonoBehaviour
     public float MaxY = 60f;
     public float MinY = -60f;
     public float SensitivityY = 0.0f;
-   private float rotationY = 0;
+    public float SensitivityX = 0.0f;
+    private float rotationY = 0;
+    private float rotationX = 0;
 
     void Start()
     {
@@ -30,11 +32,13 @@ public class PlayerMovement : MonoBehaviour
     {
        input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")); // getting the input vector
         rotationY += Input.GetAxis("Mouse Y") * SensitivityY;
+        rotationX += Input.GetAxis("Mouse X") * SensitivityX; 
         rotationY = Mathf.Clamp(rotationY, MinY, MaxY); // clamping rotation y to min and max whihc can be set in insepector 
-        if (rotationY != 0)
+        if (rotationY != 0 || rotationX != 0)
         {
             
-            cam.transform.localEulerAngles = new Vector3(-rotationY, 0, 0); // rotating the camera on the y
+            cam.transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0); // rotating the camera on the y
+            this.transform.eulerAngles = new Vector3(0.0f, rotationX, 0.0f);
         }
 
     }
@@ -45,8 +49,8 @@ public class PlayerMovement : MonoBehaviour
     void PlayerMove()
     {
         float LookDir = (Input.GetAxis("Mouse X"));
-        Vector3 forward = Camtransform.forward; //transform.forward;
-        Vector3 right = Camtransform.right; //transform.right;
+        Vector3 forward = transform.forward; //transform.forward;
+        Vector3 right = transform.right; //transform.right;
 
         right.y = 0;
 
@@ -58,15 +62,5 @@ public class PlayerMovement : MonoBehaviour
         Vector3 DesLookDir = (right * LookDir).normalized; // normalising the look directon
 
         rB.velocity = DesMoveDir.normalized * speed + new Vector3(0.0f, rB.velocity.y, 0.0f); // setting the velocity of the player so he moves
-
-
-        //if (Input.GetKey(KeyCode.Joystick1Button8))
-        //{
-        //    rB.velocity = DesMoveDir * runSpeed + new Vector3(0.0f, rB.velocity.y, 0.0f);
-        //}
-        if (DesLookDir != Vector3.zero)
-        {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(DesLookDir.normalized), 0.05f);
-        }
     }
 }
