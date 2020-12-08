@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rB;
-    private Transform Camtransform;
+    //private Transform Camtransform;
     public Camera cam;
     Vector3 input;
 
@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        Camtransform = Camera.main.transform;
+        //Camtransform = Camera.main.transform;
         rB = GetComponent<Rigidbody>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
