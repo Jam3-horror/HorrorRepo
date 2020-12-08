@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class DropWood : MonoBehaviour
 {
+    public AudioClip clip;
+    private AudioSource source;
+
+    private bool hasPlayed = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -18,6 +23,14 @@ public class DropWood : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GetComponent<ParticleSystem>().Play();
+        if (!hasPlayed)
+        {
+            GetComponent<ParticleSystem>().Play();
+
+            source.clip = clip;
+            source.Play();
+
+            hasPlayed = false;
+        }
     }
 }

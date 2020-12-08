@@ -15,6 +15,10 @@ public class MoveObject : MonoBehaviour
     public float Speed = 1f;
 
     private bool hasMoved = false;
+    private bool hasPlayed = false;
+
+    public AudioClip clip;
+    private AudioSource source;
 
     private Vector3 vec;
     private Vector3 vecRotate;
@@ -29,10 +33,10 @@ public class MoveObject : MonoBehaviour
         startRot = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
 
         vecRotate = new Vector3(AngleOffsetX, AngleOffsetY, AngleOffsetZ);
-        vecRotate.Normalize();
 
         vec = new Vector3(OffsetMoveX, OffsetMoveY, OffsetMoveZ);
-        vec.Normalize();
+
+        source = GetComponent<AudioSource>();
     }
 
     //check if the object has moved before, and if not start the transforms (as long as it has not reached its goal)
@@ -41,6 +45,7 @@ public class MoveObject : MonoBehaviour
         if (hasMoved && !checkRot())
         {
             transform.Rotate(vecRotate * Speed * Time.deltaTime);
+            playClip();
         }
         if (hasMoved && !checkPos())
         {
@@ -100,5 +105,16 @@ public class MoveObject : MonoBehaviour
         }
 
         return true;
+    }
+
+    private void playClip()
+    {
+        if (!hasPlayed)
+        {
+            source.clip = clip;
+            source.Play();
+
+            hasPlayed = true;
+        }
     }
 }
