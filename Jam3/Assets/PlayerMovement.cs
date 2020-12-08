@@ -44,7 +44,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        PlayerMove();
+   
+       
+            PlayerMove();
+      
     }
     void PlayerMove()
     {
