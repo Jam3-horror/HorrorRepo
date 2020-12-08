@@ -13,7 +13,7 @@ public class TestDoor : MonoBehaviour
     public float speed = 1;
     private void OnTriggerStay(Collider other)
     {
-        if (Inventory.instance.items.Contains(requiredItem))
+        if (Inventory.instance.items.Contains(requiredItem) && Input.GetKeyDown(KeyCode.E))
         {
             opened = true;
         }

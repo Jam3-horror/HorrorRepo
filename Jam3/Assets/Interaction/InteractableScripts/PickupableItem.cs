@@ -7,7 +7,7 @@ public class PickupableItem : Interactable
     public Item item;
     public override void Interact()
     {
-        base.Interact();
+        //base.Interact();
 
         Pickup();
     }
