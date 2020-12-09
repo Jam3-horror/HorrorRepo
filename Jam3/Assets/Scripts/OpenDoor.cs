@@ -37,14 +37,19 @@ public class OpenDoor : MonoBehaviour
 
                     animator.SetTrigger("Open");
 
-                    AudioSource audio = GetComponent<AudioSource>();
-                    audio.clip = openSounds[Random.Range(0, openSounds.Length)];
-                    audio.Play();
+                    PlayAudio();
 
                     canBeOpened = false;
                 }
             }
         }
+    }
+
+    public void PlayAudio()
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.clip = openSounds[Random.Range(0, openSounds.Length)];
+        audio.Play();
     }
 
     private void OnDrawGizmos()
