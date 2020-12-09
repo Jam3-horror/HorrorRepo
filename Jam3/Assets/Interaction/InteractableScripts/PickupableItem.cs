@@ -62,11 +62,11 @@ public class PickupableItem : Interactable
     void Pickup()
     {
         Player.GetComponent<PlayerMovement>().enabled = true;
-        bool successfulPickup = Inventory.instance.Add(item);
-        if (successfulPickup)
-        {
-            Destroy(gameObject);
-        }
+        //bool successfulPickup = Inventory.instance.Add(item);
+        //if (successfulPickup)
+        //{
+        //    Destroy(gameObject);
+        //}
     }
     void Observe()
     {
