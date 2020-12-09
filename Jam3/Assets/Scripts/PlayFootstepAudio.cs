@@ -13,7 +13,7 @@ public class PlayFootstepAudio : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody>();
 
-        InvokeRepeating("PlayFootstepsAudio", 0, 0.4f);
+        InvokeRepeating("PlayFootstepsAudio", 0, 0.5f);
     }
 
     private void Update()

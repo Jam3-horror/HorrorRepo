@@ -1518,6 +1518,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3386997539506597876, guid: 4a3a90af46deabe4a83faf0a40ad0b78, type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 3386997540817798379, guid: 4a3a90af46deabe4a83faf0a40ad0b78, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.749999
@@ -1566,12 +1570,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5302441978425018001, guid: 4a3a90af46deabe4a83faf0a40ad0b78, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a3a90af46deabe4a83faf0a40ad0b78, type: 3}
+--- !u!1 &174847510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3386997539506597771, guid: 4a3a90af46deabe4a83faf0a40ad0b78, type: 3}
+  m_PrefabInstance: {fileID: 174847509}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &174847514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174847510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0065587ee1965544aab8d76569751dca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bobbingSpeed: 0.06
+  bobbingAmount: 0.05
+  midpoint: 1
 --- !u!43 &177442811
 Mesh:
   m_ObjectHideFlags: 0
