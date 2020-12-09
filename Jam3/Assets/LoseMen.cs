@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LoseMen : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void restartGame()
+    public void RestartGame()
     {
-        SceneManager.LoadScene("Hotel");
+        SceneManager.LoadScene("HarryHotel");
     }
     public void QuitGame()
     {

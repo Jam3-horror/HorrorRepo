@@ -7,11 +7,11 @@ public class GameManagerScript : MonoBehaviour
 {
     public void MonsterKill()
     {
-
+        SceneManager.LoadScene("GameOverMonster", LoadSceneMode.Single);
     }
 
     public void Escape()
     {
-
+        SceneManager.LoadScene("GameOverEscape", LoadSceneMode.Single);
     }
 }

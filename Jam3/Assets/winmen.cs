@@ -6,10 +6,11 @@ public class winmen : MonoBehaviour
 {
     public void restartGame()
     {
-        SceneManager.LoadScene("Hotel");
+        SceneManager.LoadScene("HarryHotel");
     }
     public void QuitGame()
-    { Application.Quit();
+    {
+        Application.Quit();
     }
 
 }
