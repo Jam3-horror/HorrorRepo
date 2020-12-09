@@ -9,5 +9,6 @@ public class ActivateMonster : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         monster.SetActive(true);
+        this.gameObject.SetActive(false);
     }
 }
