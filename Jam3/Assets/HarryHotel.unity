@@ -27526,7 +27526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08fa3eb7b2400fe498a59348cc1c1586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 0
+  isLocked: 1
   canBeOpened: 1
   openRadius: 2
   fText: {fileID: 1108143079}
