@@ -4,15 +4,38 @@ using UnityEngine;
 
 public class PlayFootstepAudio : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public AudioClip[] footstepSounds;
+    bool walking;
+
+    Rigidbody rb;
+
+    private void Start()
     {
-        
+        rb = this.GetComponent<Rigidbody>();
+
+        InvokeRepeating("PlayFootstepsAudio", 0, 0.4f);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if(rb.velocity != Vector3.zero)
+        {
+            walking = true;
+        }
+
+        if(rb.velocity == Vector3.zero)
+        {
+            walking = false;
+        }
+    }
+
+    void PlayFootstepsAudio()
+    {
+        if (walking)
+        {
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.clip = footstepSounds[Random.Range(0, footstepSounds.Length)];
+            audio.Play();
+        }
     }
 }

@@ -9,6 +9,7 @@ public class OpenDoor : MonoBehaviour
     public bool canBeOpened;
     public float openRadius;
     public GameObject fText;
+    public AudioClip[] openSounds;
 
     Animator animator;
 
@@ -34,9 +35,13 @@ public class OpenDoor : MonoBehaviour
                 {
                     fText.SetActive(false);
 
-                    canBeOpened = false;
-
                     animator.SetTrigger("Open");
+
+                    AudioSource audio = GetComponent<AudioSource>();
+                    audio.clip = openSounds[Random.Range(0, openSounds.Length)];
+                    audio.Play();
+
+                    canBeOpened = false;
                 }
             }
         }
