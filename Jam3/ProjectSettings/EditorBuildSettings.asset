@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menus.unity
+    guid: 71f12fcd5b0ec854f92c6031e5ae3f4b
+  - enabled: 1
+    path: Assets/HarryHotel.unity
+    guid: b563473e76919a246a264215d3c8f6e5
+  - enabled: 1
+    path: Assets/Scenes/GameOverEscape.unity
+    guid: 99856883e933eb04ea2b3d7aaa8bf7b4
+  - enabled: 1
+    path: Assets/Scenes/GameOverMonster.unity
+    guid: d45cd2c2024d1fc44b9931a9936363c6
   m_configObjects: {}
